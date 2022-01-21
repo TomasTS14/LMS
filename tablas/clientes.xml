@@ -1,0 +1,12 @@
+<!DOCTYPE clientes SYSTEM "clientes.dtd">
+<clientes>
+    <cliente codigo="1" email="a@a.es" nombre="Ana" telefono="666555444"></cliente>
+    <cliente codigo="2" email="b@b.es" nombre="Belen">
+        <compras>
+            <compra codigo="1" cliente="2" importe="40€">
+                <producto codigo="1" nombre="FIFA 20" precio="40€" provedor="EA"></producto>
+            </compra>
+        </compras>
+    </cliente>
+    <cliente codigo="3" email="c@c.es" nombre="Cristina" telefono="66633344"></cliente>
+</clientes>

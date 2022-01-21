@@ -1,0 +1,28 @@
+<!-- -->
+<!ELEMENT clientes (cliente)>
+<!-- -->
+<!ELEMENT cliente (compras?)>
+<!ATTLIST cliente
+    codigo CDATA #REQUIRED
+    email CDATA #REQUIRED
+    nombre CDATA #REQUIRED
+    telefono CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT compras (compra+)>
+<!-- -->
+<!ELEMENT compra (producto+)>
+<!ATTLIST compra
+    codigo CDATA #REQUIRED
+    cliente CDATA #REQUIRED
+    importe CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT producto (#PCDATA)>
+<!ATTLIST producto
+    codigo CDATA #REQUIRED
+    nombre CDATA #REQUIRED
+    precio CDATA #REQUIRED
+    provedor CDATA #IMPLIED
+>
+<!-- -->

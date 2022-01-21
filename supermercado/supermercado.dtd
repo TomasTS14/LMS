@@ -1,0 +1,10 @@
+<!ELEMENT supermercado (trabajador*,producto*,horario)>
+<!ELEMENT trabajador (dni,nombre,(email|telefono))>
+<!ELEMENT producto (codigo,nombre,categoria?)>
+<!ELEMENT horario (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>

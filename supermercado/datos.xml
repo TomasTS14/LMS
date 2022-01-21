@@ -1,0 +1,20 @@
+<!DOCTYPE supermercado SYSTEM "supermercado.dtd">
+<supermercado>
+    <trabajador>
+        <dni>127398127983</dni>
+
+        <nombre>Matias</nombre>
+        <email>matiaschiquito@hotmail.com</email>
+
+    </trabajador>
+    <producto>
+
+        <codigo>123123</codigo>
+        <nombre>pasta fea</nombre>
+        <categoria>pasta de las feas</categoria>
+    </producto>
+
+    <horario>
+        L-V 9:00-20:00
+    </horario>
+</supermercado>

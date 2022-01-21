@@ -1,0 +1,11 @@
+<!DOCTYPE libreria SYSTEM "libros.dtd">
+<libreria>
+    <libro isbn="8478884459">
+        <titulo>Harry Potter y la Piedra Filosofal</titulo>
+        <autor nombre="J.K. Rowling"></autor>
+    </libro>
+    <libro isbn="9788493806125">
+        <titulo>Don Quijote de la Mancha</titulo>
+        <autor nombre="Miguel de Cervantes" fechaNacimiento="1547"></autor>
+    </libro>
+</libreria>

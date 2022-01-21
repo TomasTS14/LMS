@@ -1,0 +1,11 @@
+<!ELEMENT libreria (libro*)>
+<!-- -->
+<!ELEMENT libro (titulo, autor)>
+<!ATTLIST libro isbn CDATA #REQUIRED>
+<!-- -->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ATTLIST autor
+    nombre CDATA #REQUIRED
+    fechaNacimiento CDATA #IMPLIED
+>
