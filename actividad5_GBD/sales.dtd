@@ -1,0 +1,7 @@
+<!ELEMENT sales (sale*)>
+<!ELEMENT sale (article*)>
+<!ATTLIST sale
+  id ID #REQUIRED
+  timeStamp CDATA #IMPLIED
+  amount CDATA #IMPLIED
+  delivered CDATA (>
