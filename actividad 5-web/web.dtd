@@ -21,7 +21,7 @@
 <!ELEMENT body (div|nav|a|p|h1|h2|h3|ul|li|button|header|img|section|footer|script)*>
 <!ATTLIST body id CDATA #REQUIRED>
 <!-- -->
-<!ELEMENT div (div|nav|textarea|a|p|h1|h2|h3|h4|ul|li|label|input|form|button|header|img|i|section|footer|script)*>
+<!ELEMENT div (div|nav|textarea|small|a|p|h1|h2|h3|h4|ul|li|label|input|form|button|header|img|i|section|footer|script)*>
 <!ATTLIST div
     class CDATA #IMPLIED
     id CDATA #IMPLIED
@@ -116,3 +116,8 @@
 >
 <!-- -->
 <!ELEMENT footer (div|nav|a|p|h1|h2|h3|ul|li|button|header|img|section|footer|script)*>
+<!ATTLIST footer class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT h4 (#PCDATA)>
+<!ATTLIST h4 class CDATA #IMPLIED>
+<!-- -->
