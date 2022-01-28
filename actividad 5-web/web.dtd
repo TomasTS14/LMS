@@ -27,6 +27,13 @@
     id CDATA #IMPLIED
     data-toggle CDATA #IMPLIED
     data-target CDATA #IMPLIED
+    tabindex CDATA #IMPLIED
+    role CDATA #IMPLIED
+    aria-labelledby CDATA #IMPLIED
+    aria-hidden CDATA #IMPLIED
+
+    
+
 >
 <!-- -->
 <!ELEMENT form (div|button|input|p)*>
@@ -77,6 +84,10 @@
     aria-controls CDATA #IMPLIED
     aria-expanded CDATA #IMPLIED
     aria-label CDATA #IMPLIED
+    data-dismiss CDATA #IMPLIED
+    href CDATA #IMPLIED
+
+
 >
 <!-- -->
 <!ELEMENT ul (li|ul|a)*>
@@ -121,3 +132,9 @@
 <!ELEMENT h4 (#PCDATA)>
 <!ATTLIST h4 class CDATA #IMPLIED>
 <!-- -->
+<!ELEMENT small (#PCDATA)>
+<!-- -->
+<!ELEMENT script (#PCDATA)>
+<!ATTLIST script
+ src CDATA #IMPLIED
+ >
