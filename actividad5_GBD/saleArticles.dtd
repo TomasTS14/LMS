@@ -1,0 +1,7 @@
+<!ELEMENT productos (producto*)>
+<!ELEMENT producto (#PCDATA)>
+<!ATTLIST producto
+ id CDATA #REQUIRED
+ name CDATA #IMPLIED
+ price CDATA #IMPLIED
+ >
