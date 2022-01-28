@@ -1,0 +1,118 @@
+<!ELEMENT html (head,body)>
+<!ATTLIST html lang CDATA #REQUIRED>
+<!-- -->
+<!ELEMENT head (meta|title|link)*>
+<!-- -->
+<!ELEMENT meta (#PCDATA)>
+<!ATTLIST meta
+    charset CDATA #IMPLIED
+    name CDATA #IMPLIED
+    content CDATA #IMPLIED
+>
+<!ELEMENT title (#PCDATA)>
+<!-- -->
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link
+    href CDATA #REQUIRED
+    rel CDATA #IMPLIED
+    type CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT body (div|nav|a|p|h1|h2|h3|ul|li|button|header|img|section|footer|script)*>
+<!ATTLIST body id CDATA #REQUIRED>
+<!-- -->
+<!ELEMENT div (div|nav|textarea|a|p|h1|h2|h3|h4|ul|li|label|input|form|button|header|img|i|section|footer|script)*>
+<!ATTLIST div
+    class CDATA #IMPLIED
+    id CDATA #IMPLIED
+    data-toggle CDATA #IMPLIED
+    data-target CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT form (div|button|input|p)*>
+<!ATTLIST form
+    name CDATA #IMPLIED
+    id CDATA #IMPLIED
+    novalidate CDATA #IMPLIED
+>
+<!ELEMENT nav (div|a|p|h1|h2|h3|ul|li|button|header|img|section)*>
+<!ATTLIST nav
+    class CDATA #IMPLIED
+    id CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT section (div|a|p|h1|h2|h3|ul|li|button|header|img)*>
+<!ATTLIST section
+    class CDATA #IMPLIED
+    id CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT header (div|a|p|h1|h2|h3|ul|li|button|header|img)*>
+<!ATTLIST header class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT a (#PCDATA)>
+<!ATTLIST a
+    class CDATA #IMPLIED
+    href CDATA #IMPLIED
+>
+<!ELEMENT p (#PCDATA)*>
+<!ATTLIST p class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT h1 (#PCDATA)*>
+<!ATTLIST h1 class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT h2 (#PCDATA)>
+<!ATTLIST h2 class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT i (#PCDATA)>
+<!ATTLIST i class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT button (#PCDATA)>
+<!ATTLIST button
+    class CDATA #IMPLIED
+    id CDATA #IMPLIED
+    type CDATA #IMPLIED
+    data-toggle CDATA #IMPLIED
+    data-target CDATA #IMPLIED
+    aria-controls CDATA #IMPLIED
+    aria-expanded CDATA #IMPLIED
+    aria-label CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT ul (li|ul|a)*>
+<!ATTLIST ul class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT li (ul|li|a)*>
+<!ATTLIST li class CDATA #IMPLIED>
+<!-- -->
+<!ELEMENT img (#PCDATA)>
+<!ATTLIST img
+    class CDATA #IMPLIED
+    src CDATA #IMPLIED
+    href CDATA #IMPLIED
+    alt CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT label (#PCDATA)>
+<!-- -->
+<!ELEMENT input (#PCDATA)>
+<!ATTLIST input
+    class CDATA #IMPLIED
+    id CDATA #IMPLIED
+    type CDATA #IMPLIED
+    placeholder CDATA #IMPLIED
+    required CDATA #IMPLIED
+    data-validation-required-message CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT textarea (#PCDATA)>
+<!ATTLIST textarea
+    class CDATA #IMPLIED
+    id CDATA #IMPLIED
+    rows CDATA #IMPLIED
+    placeholder CDATA #IMPLIED
+    required CDATA #IMPLIED
+    data-validation-required-message CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT footer (div|nav|a|p|h1|h2|h3|ul|li|button|header|img|section|footer|script)*>
