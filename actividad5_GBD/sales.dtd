@@ -4,4 +4,12 @@
   id ID #REQUIRED
   timeStamp CDATA #IMPLIED
   amount CDATA #IMPLIED
-  delivered CDATA (>
+  delivered CDATA (
+>
+<!-- -->
+<!ELEMENT article (#PCDATA)>
+<!ATTLIST article
+  id ID #REQUIRED
+  name CDATA #IMPLIED
+  price CDATA #IMPLIED
+>
