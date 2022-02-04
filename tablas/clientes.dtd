@@ -1,5 +1,5 @@
 <!-- -->
-<!ELEMENT clientes (cliente)>
+<!ELEMENT clientes (cliente*)>
 <!-- -->
 <!ELEMENT cliente (compras?)>
 <!ATTLIST cliente
