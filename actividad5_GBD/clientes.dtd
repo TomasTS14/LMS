@@ -6,7 +6,9 @@
 
 -->
 <!ATTLIST cliente
- id CDATA #REQUIRED>
+ id CDATA #REQUIRED
+ nombre CDATA #IMPLIED>
+ 
  <!ATTLIST compra
 codigo CDATA #REQUIRED
 monto CDATA #IMPLIED>

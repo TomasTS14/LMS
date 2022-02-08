@@ -1,12 +1,12 @@
 <!DOCTYPE clientes SYSTEM "clientes.dtd">
 <clientes>
-    <cliente id="9511">
+    <cliente id="9511" nombre="Manuel Ríos ">
         <compra codigo="1" monto="1578.80"></compra>
     </cliente>
-    <cliente id="2353">
+    <cliente id="2353" nombre="Carmen Díaz ">
         <compra codigo="2" monto="189.90"></compra>
     </cliente>
-    <cliente id="9731">
+    <cliente id="9731" nombre="Laura Vera ">
         <compra codigo="3" monto="372.90"></compra>
     </cliente>
 </clientes>
