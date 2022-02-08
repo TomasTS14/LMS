@@ -3,5 +3,12 @@
 <articulo id="1" nombre="portatil MSI" price="890"></articulo>
 <articulo id="2" nombre="Logitech MX" price="78"></articulo>
 <articulo id="3" nombre="AMD Ryzen 5 2500" price="125"></articulo>
+<articulo id="4" nombre="Gigabyte b450m" price="67.99"></articulo>
+<articulo id="5" nombre="Lenovo Legion" price="1229.00"></articulo>
+<articulo id="6" nombre="AMD Ryzen 7 2700 " price="189.90"></articulo>
+<articulo id="7" nombre="Asus Radeon RX580" price="169.90"></articulo>
+<articulo id="8" nombre="Sapphire Pulse RX 580" price="179.90"></articulo>
+<articulo id="9" nombre="Kingston A400 240GB " price="29.99"></articulo>
+<articulo id="10" nombre="Teclado Razer" price="149.90"></articulo>
 </articulos>
   
