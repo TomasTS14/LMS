@@ -9,4 +9,4 @@
  id CDATA #REQUIRED>
  <!ATTLIST compra
 codigo CDATA #REQUIRED
-monto CDATA #REQUIRED>
+monto CDATA #IMPLIED>
