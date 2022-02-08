@@ -1,7 +1,0 @@
-<!ELEMENT articles (article*)>
-<!ELEMENT article (#PCDATA)>
-<!ATTLIST article
- id CDATA #REQUIRED
- name CDATA #IMPLIED
- price CDATA #IMPLIED
- >

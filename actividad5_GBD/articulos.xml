@@ -1,0 +1,7 @@
+<!DOCTYPE articulos SYSTEM "articulos.dtd">
+<articulos>
+<articulo id="1" nombre="portatil MSI" price="890"></articulo>
+<articulo id="2" nombre="Logitech MX" price="78"></articulo>
+<articulo id="3" nombre="AMD Ryzen 5 2500" price="125"></articulo>
+</articulos>
+  

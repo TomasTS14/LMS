@@ -1,0 +1,11 @@
+<!ELEMENT clientes (cliente*)>
+<!ELEMENT cliente (compra*)>
+<!ELEMENT compra (#PCDATA)>
+<!-- 
+
+-->
+<!ATTLIST cliente
+ id CDATA #REQUIRED>
+ <!ATTLIST compra
+codigo CDATA #REQUIRED
+monto CDATA #IMPLIED>

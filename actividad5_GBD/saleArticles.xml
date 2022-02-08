@@ -1,8 +1,0 @@
-<!DOCTYPE articles SYSTEM "saleArticles.dtd" >
-<articles>
-    <article id="1" name="Portatil MSI" price="890.00"></article>
-    <article id="2" name="Logitech MX" price="78.00"></article>
-    <article id="3" name="AMD Ryzen 5 2600" price="125.00"></article>
-    <article id="4" name="Gigabyte b450m" price="67.99"></article>
-</articles>
-  
