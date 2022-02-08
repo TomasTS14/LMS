@@ -1,0 +1,12 @@
+<!DOCTYPE clientes SYSTEM "clientes.dtd">
+<clientes>
+    <cliente id="9511">
+        <compra codigo="1" monto="1578.80"></compra>
+    </cliente>
+    <cliente id="2353">
+        <compra codigo="2" monto="189.90"></compra>
+    </cliente>
+    <cliente id="9731">
+        <compra codigo="3" monto="372.90"></compra>
+    </cliente>
+</clientes>
