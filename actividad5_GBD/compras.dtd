@@ -1,18 +1,12 @@
-<!ELEMENT sales (sale*)>
-<!ELEMENT sale (article*)>
-<!ATTLIST sale
-  id ID #REQUIRED
-  timeStamp CDATA #IMPLIED
-  amount CDATA #IMPLIED
-  delivered CDATA #IMPLIED
-  gift CDATA #IMPLIED
-  valid CDATA #IMPLIED
-  cliente CDATA #IMPLIED
->
-<!-- -->
-<!ELEMENT article (#PCDATA)>
-<!ATTLIST article
-  id ID #REQUIRED
-  name CDATA #IMPLIED
-  price CDATA #IMPLIED
->
+<!ELEMENT compras (compra*)>
+<!ELEMENT compra (articulo*)>
+<!ELEMENT articulo (#PCDATA)>
+<!ATTLIST compra
+  id CDATA #REQUIRED
+  clientID CDATA #REQUIRED
+  precio CDATA #REQUIRED
+ >
+ <!ATTLIST articulo
+  codigo CDATA #REQUIRED
+  nombre CDATA #REQUIRED
+  precio CDATA #REQUIRED>
