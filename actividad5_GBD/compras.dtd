@@ -1,0 +1,12 @@
+<!ELEMENT compras (compra*)>
+<!ELEMENT compra (articulo*)>
+<!ELEMENT articulo (#PCDATA)>
+<!ATTLIST compra
+  id CDATA #REQUIRED
+  clientID CDATA #REQUIRED
+  precio CDATA #IMPLIED
+ >
+ <!ATTLIST articulo
+  codigo CDATA #REQUIRED
+  nombre CDATA #IMPLIED
+  precio CDATA #IMPLIED>

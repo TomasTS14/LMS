@@ -1,0 +1,18 @@
+<!DOCTYPE compras SYSTEM "compras.dtd">
+ <compras>
+    <compra id="1" clientID=" 9511 " precio="1578.80">
+        <articulo codigo="7" nombre="Asus Radeon RX580" precio="169.90"></articulo>
+        <articulo codigo="8" nombre="Sapphire Pulse RX 580 " precio="179.90"></articulo>
+        <articulo codigo="5" nombre="Lenovo Legion" precio="1229.00"></articulo>
+    </compra>
+    <compra id="2" clientID="2353" precio="189.90">
+<articulo codigo="6" nombre=" AMD Ryzen 7 2700 " precio="189.90"></articulo>
+    </compra>
+     <compra id="3" clientID="9731" precio="372.90">
+         <articulo codigo="5" nombre="AMD Ryzen 5 2600 " precio="125.00"></articulo>
+         <articulo codigo="2" nombre="Logitech MX" precio="78.00"></articulo>
+         <articulo codigo="7" nombre="ASUS Radeon RX580" precio="169.90"></articulo>
+     </compra>
+   
+    
+</compras>
