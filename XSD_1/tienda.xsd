@@ -1,8 +1,37 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="tienda">
         <xs:complexType>
-            
+            <xs:sequence>
+                <xs:element ref="cliente" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
         </xs:complexType>
-        
+    </xs:element>
+    <xs:element name="cliente">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="compra" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="codigo"></xs:attribute>
+            <xs:attribute name="email"></xs:attribute>
+            <xs:attribute name="nombre"></xs:attribute>
+            <xs:attribute name="telefono"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="compra">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="producto" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="codigo"></xs:attribute>
+            <xs:attribute name="importe"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="producto">
+        <xs:complexType>
+            <xs:attribute name="codigo"></xs:attribute>
+            <xs:attribute name="nombre"></xs:attribute>
+            <xs:attribute name="precio"></xs:attribute>
+            <xs:attribute name="proveedor"></xs:attribute>
+        </xs:complexType>
     </xs:element>
 </xs:schema>

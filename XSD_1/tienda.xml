@@ -1,0 +1,14 @@
+<tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tienda.xsd">
+    <cliente codigo="1" email="a@a.a" nombre="Ana" telefono="666555444">
+        <compra codigo="1" importe="40€">
+            <producto codigo="1" nombre="FIFA 20" precio="40€" proveedor="EA"></producto>
+        </compra>
+    </cliente>
+    <cliente codigo="2" email="b@b.b" nombre="Belén">
+        <compra codigo="2" importe="55€">
+            <producto codigo="2" nombre="GTA V" precio="30€"></producto>
+            <producto codigo="3" nombre="FarCry V" precio="25€" proveedor="Ubisoft"></producto>
+        </compra>
+    </cliente>
+    <cliente codigo="3" email="c@c.c" nombre="Cristina" telefono="666333444" />
+</tienda>
