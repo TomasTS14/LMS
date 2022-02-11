@@ -1,0 +1,22 @@
+<files xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="files.xsd">
+    <dir path="/">
+        <dir path="home">
+            <dir path="sergio">
+                <dir path="Downloads">
+                    <file name="examenes.txt">
+                        <content>LMSGI, BD, DWES</content>
+                        <permission>755</permission>
+                    </file>
+                </dir>
+                <dir path="Documents">
+                    <file name="notas.txt">
+                        <content>Este es mi fichero de notas personales</content>
+                        <permission>700</permission>
+                    </file>
+                </dir>
+                <file name="accesoDirecto" references="/home/sergio/Downloads/examenes.txt" />
+            </dir>
+        </dir>
+    </dir>
+</files>
+ 

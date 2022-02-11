@@ -1,0 +1,27 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="files">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dir" />
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+    <xs:complexType name="directorio">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="dir" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element ref="file" minOccurs="0" maxOccurs="unbounded" />
+        </xs:choice>
+        <xs:attribute name="path" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="file">
+        <xs:sequence>
+            <xs:element name="content" minOccurs="0"></xs:element>
+            <xs:element name="permission" minOccurs="0"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" />
+        <xs:attribute name="references" />
+    </xs:complexType>
+    <xs:element name="dir" type="directorio"></xs:element>
+    <xs:element name="file" type="file"></xs:element>
+</xs:schema>
