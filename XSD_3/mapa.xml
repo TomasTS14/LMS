@@ -1,2 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Huesca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Huesca.xsd"></Huesca>
+<mapa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mapa.xsd">
+<localidad nombre="Huesca">
+<via nombre="E-7" tipo="europea">
+<localidad nombre="Cuarte" distancia="3 km"></localidad>
+<localidad nombre="Yequeda" distancia="4 km"></localidad>
+<localidad nombre="Arascues" distancia="8 km"></localidad>
+<localidad nombre="Nueno" distancia="9 km"></localidad>
+<localidad nombre="Almudevar" distancia="10 km"></localidad>
+<localidad nombre="San Jorge" distancia="12km"></localidad>
+</via>
+
+<via nombre="N-240" tipo="nacional">
+            <localidad nombre="Tierz" distancia="4km"></localidad>
+            <localidad nombre="Quicena" distancia="4km"></localidad>
+            <localidad nombre="Siétamo" distancia="8km"></localidad>
+            <localidad nombre="Velillas" distancia="12km"></localidad>
+            <localidad nombre="Angüés" distancia="15km"></localidad>
+            <localidad nombre="Ayerbe" distancia="15km"></localidad>   
+</via>
+<via nombre="A-132" tipo="autonómica">
+            <localidad nombre="Chimillas" distancia="3km"></localidad>
+            <localidad nombre="Esquedas" distancia="7km"></localidad>
+            <localidad nombre="Lierta" distancia="7km"></localidad>
+            <localidad nombre="Plasencia del Monte" distancia="9km"></localidad>
+            <localidad nombre="Bolea" distancia="9km"></localidad>
+            <localidad nombre="Loscorrales" distancia="12km"></localidad>
+            <localidad nombre="Fontellas" distancia="13km"></localidad>
+            <localidad nombre="Ayerbe" distancia="15km"></localidad>
+</via>
+<via nombre="A-1207" tipo="autonómica">
+            <localidad nombre="Lupiñén" distancia="11km"></localidad>
+            <localidad nombre="Valsalada" distancia="12km"></localidad>
+            <localidad nombre="Ortilla" distancia="13km"></localidad>
+            <localidad nombre="Montmesa" distancia="14km"></localidad>
+            <localidad nombre="Alcalá de Gurrea" distancia="14km"></localidad>
+            <localidad nombre="Tormos" distancia="17km"></localidad>
+</via>
+ <via nombre="A-131" tipo="autonómica">
+            <localidad nombre="Bellestar del Flumen" distancia="3km"></localidad>
+            <localidad nombre="Monflorite" distancia="5km"></localidad>
+            <localidad nombre="Albero Alto" distancia="9km"></localidad>
+            <localidad nombre="Novales" distancia="12km"></localidad>
+            <localidad nombre="Albero Bajo" distancia="15km"></localidad>
+            <localidad nombre="Sesa" distancia="16km"></localidad>
+</via>
+</localidad>
+</mapa>

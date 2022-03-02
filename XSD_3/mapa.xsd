@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mapa">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="via"/>
+                <xs:element ref="localidad"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="via">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="localidad" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string"/>
+            <xs:attribute name="tipo" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="localidad">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="via"/>
+            </xs:choice>
+            <xs:attribute name="nombre" type="xs:string"></xs:attribute>
+            <xs:attribute name="distancia" type="xs:string"></xs:attribute>
+        </xs:complexType> 
+    </xs:element>
+    
+</xs:schema>
