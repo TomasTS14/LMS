@@ -1,0 +1,6 @@
+<coches>
+    <coche matricula="2233BCM" marca="Opel" modelo="Corsa" km="10000" />
+    <coche matricula="2233FKB" marca="Audi" modelo="A3" km="100" />
+    <coche matricula="2233BCM" marca="Opel" modelo="Corsa" km="10000" />
+    <coche matricula="3433DGM" marca="Seat" modelo="León" km="500" />
+</coches>

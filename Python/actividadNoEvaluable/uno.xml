@@ -1,0 +1,15 @@
+<meses>
+    <mes nombre="enero" dias="31" />
+    <mes nombre="febrero" dias="28" />
+    <mes nombre="marzo" dias="31" />
+    <mes nombre="abril" dias="30" />
+    <mes nombre="mayo" dias="31" />
+    <mes nombre="junio" dias="30" />
+    <mes nombre="julio" dias="31" />
+    <mes nombre="agosto" dias="31" />
+    <mes nombre="septiembre" dias="30" />
+    <mes nombre="octubre" dias="31" />
+    <mes nombre="noviembre" dias="30" />
+    <mes nombre="diciembre" dias="31" />
+</meses>
+    

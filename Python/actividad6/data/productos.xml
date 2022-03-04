@@ -1,0 +1,6 @@
+<productos>
+    <producto id="1" nombre="PS4" precio="250" />
+    <producto id="2" nombre="Mando PS4" precio="50" />
+    <producto id="3" nombre="Monitor Benq" precio="100" />
+    <producto id="4" nombre="Ratón inalámbrico" precio="20" />
+</productos>

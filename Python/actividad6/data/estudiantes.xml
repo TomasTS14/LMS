@@ -1,0 +1,19 @@
+<alumnos>
+    <alumno nombre="Jorge">
+        <asignaturas>
+            <asignatura nombre="GBD" />
+            <asignatura nombre="LMSGI" />
+        </asignaturas>
+    </alumno>
+    <alumno nombre="Ana">
+        <asignaturas>
+            <asignatura nombre="ISO" />
+        </asignaturas>
+    </alumno>
+    <alumno nombre="Eva">
+        <asignaturas>
+            <asignatura nombre="FH"></asignatura>
+            <asignatura nombre="LMSGI"></asignatura>
+        </asignaturas>
+    </alumno>
+</alumnos>

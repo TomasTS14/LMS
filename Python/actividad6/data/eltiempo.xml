@@ -1,0 +1,30 @@
+<temperaturas>
+    <lectura>
+        <hora>09:00</hora>
+        <grados>15</grados>
+    </lectura>
+    <lectura>
+        <hora>10:00</hora>
+        <grados>16</grados>
+    </lectura>
+    <lectura>
+        <hora>11:00</hora>
+        <grados>17</grados>
+    </lectura>
+    <lectura>
+        <hora>12:00</hora>
+        <grados>18</grados>
+    </lectura>
+    <lectura>
+        <hora>13:00</hora>
+        <grados>19</grados>
+    </lectura>
+    <lectura>
+        <hora>14:00</hora>
+        <grados>20</grados>
+    </lectura>
+    <lectura>
+        <hora>15:00</hora>
+        <grados>20</grados>
+    </lectura>
+</temperaturas>
