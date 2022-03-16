@@ -1,0 +1,7 @@
+<ciudades>
+    <ciudad nombre="Caracas" pais="Venezuela" poblacionEnMMM="5" />
+    <ciudad nombre="Barquisimeto" pais="Venezuela" poblacionEnMMM="1" />
+    <ciudad nombre="Londres" pais="UK" poblacionEnMMM="8" />
+    <ciudad nombre="New York" pais="EEUU" poblacionEnMMM="15" />
+    <ciudad nombre="Los Angeles" pais="EEUU" poblacionEnMMM="8" />
+</ciudades>

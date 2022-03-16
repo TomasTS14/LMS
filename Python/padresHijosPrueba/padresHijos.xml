@@ -1,0 +1,13 @@
+<padres>
+    <padre nombre= "Juan" dni="a" profesion="a">
+        <hijo nombre= "Juanito" dni = "ai" grado= "3"/>
+        <hijo nombre= "Juanca" dni = "ai2" grado= "3"/>
+    </padre>
+    <padre nombre="Carlos" dni="b" profesion="b">
+        <hijo nombre="Marcos" dni="bi" grado="1"/>
+        <hijo nombre="Carlitos" dni="bi2" grado="2"/>
+    </padre>
+    <padre nombre="Luis" dni="c" profesion="c">
+        <hijo nombre="luisin" dni="ci" grado="4"/>
+    </padre>
+</padres>

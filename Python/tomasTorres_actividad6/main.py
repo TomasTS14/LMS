@@ -55,31 +55,25 @@ def ejercicio3():
     # procesar los estudiantes y exportar a HTML
     contentHTML3 = '<html>'
     contentHTML3 += '<body>'
-
-    alumnoNombre = alumno.attrib['nombre']
-    if alumnoNombre == nombre:
-        contentHTML3 +='<p>' + ' Alumno: ' + alumnoNombre + '</p>'
-
-        asignaturas = alumno.find("asignaturas")
-        asignatura = asignaturas.find("asignatura")
-
-        if(asignatura.attrib["nombre"] == modulo):
-            for asignatura in asignaturas:
-                contentHTML3 +='<p>' +"Modulo: "+ asignaturaNombre 
-
-
-
-
-
-
     for alumno in estudiantes:
+        flag = False
         alumnoNombre = alumno.attrib['nombre']
         if alumnoNombre == nombre:
+            alumnoHTML = '<p>'+' Nombre: '+alumnoNombre + '</p>'
+            asignaturasHTML= ''
             asignaturas = alumno.find('asignaturas')
             for asignatura in asignaturas:
                 asignaturaNombre = asignatura.attrib['nombre']
-                if asignaturaNombre == modulo:
-                    contentHTML3 +='<p>' + ' Alumno: ' + alumnoNombre + ' Modulo: '+ asignaturaNombre
+                if asignaturaNombre ==  modulo:
+                    for asignatura in asignaturas:
+                        asignaturaNombre = asignatura.attrib['nombre']
+                        asignaturasHTML += '<p> ' + ' Asignatura: ' + asignaturaNombre + '</p>'
+                        flag = True
+    if flag == True:
+        print('Alumno encontrado, html generado.')
+        contentHTML3 += alumnoHTML + asignaturasHTML
+    elif flag == False:
+        print('Alumno no encontrado o no cursa el modulo especificado')
     contentHTML3 += '</body>'
     contentHTML3 += '</html>'
     write("estudiantes.html", contentHTML3)
@@ -87,11 +81,40 @@ def ejercicio3():
 
 def ejercicio4():
     print("Leyendo productos")
+    productos = read('data/productos.xml')
     print("¿Qué productos quieres buscar?")
     nombre = input("Nombre: ")
-    mayorMenor = input("Superiores a un precio (si|no): ")
+    # modifico el nombre de la variable porque me confunde mucho
+    mayorAPrecio = input("Superiores a un precio (si|no): ")
     precio = int(input("Precio: "))
+    # primeras etiquetas html
+    contentHTML='<html>'
+    contentHTML += '<body>'
     # procesar los productos y exportar a HTML
+    #uso de flag
+    flag = False
+    auxHTML=''
+
+    for producto in productos: 
+        nombreProducto = producto.attrib['nombre']
+        precioProducto = producto.attrib['precio']
+        if nombreProducto == nombre:
+            if mayorAPrecio == "si" and int(precioProducto) > precio:
+                flag = True
+                print("Producto encontrado, agreagando a html")
+                auxHTML += '<p>'+'ID:'+producto.attrib['id']+' Producto: '+nombreProducto+' Precio: '+precioProducto+'</p>'
+            elif mayorAPrecio == "no" and int(precioProducto) < precio:
+                flag=True
+                print("Producto encontrado, agreagando a html")
+                auxHTML += '<p>'+'ID:'+producto.attrib['id']+' Producto: '+nombreProducto+' Precio: '+precioProducto+'</p>'
+    if(flag == False):
+        print("Producto no encontrado")
+    else:
+        contentHTML += auxHTML
+    contentHTML += '</body>'
+    contentHTML += '</html>'
+    write("productos.html", contentHTML)
+
 
 
 def main():
