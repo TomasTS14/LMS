@@ -1,10 +1,10 @@
 
-from common.utils import read
+from common.utils import read, write
 # prendas
 from entities.Camiseta import Camiseta
 from entities.Pantalon import Pantalon
 from entities.Zapatillas import Zapatillas
-
+import entities.Prenda
 path = './data/datos.xml'
 
 
@@ -32,25 +32,57 @@ class Armario:
 
     def agregar(self):
         
-        tipo = int(input("Que deseas agregar \n1)Camiseta\n2)Pantalon\n3)Zapatillas"))
+        tipo = int(input("Que deseas agregar \n1)Camiseta\n2)Pantalon\n3)Zapatillas\n"))
         if tipo == 1:
             marca = input("Introduce la marca:")
             color = input ("Introduce el color:")
-            talla = input("Introduce la talla")
+            talla = input("Introduce la talla:")
             prenda = Camiseta(marca,color,talla)
         elif tipo == 2:
             marca = input("Introduce la marca:")
             color = input ("Introduce el color:")
-            talla = input("Introduce la talla")
+            talla = input("Introduce la talla:")
             prenda = Pantalon(marca,color,talla)
         elif tipo == 3:
             marca = input("Introduce la marca:")
             color = input ("Introduce el color:")
-            talla = input("Introduce la talla")
+            talla = input("Introduce la talla:")
             prenda = Zapatillas(marca,color,talla)
 
         self.prendas.append(prenda)
 
-    def eliminar(self):
-        for prenda in prendas:
-            
+    def buscarYmostrarXML(self):
+        contentXML = "<armario>"
+        tipoPrenda = input("Que tipo de prenda quieres buscar:\n1)Camiseta\n2)Pantalon\n3)Zapatilla\n")
+        if tipoPrenda == "1":
+            tipoPrenda = "camiseta"
+        elif tipoPrenda == "2":
+            tipoPrenda = "pantalon"
+        elif tipoPrenda == "3":
+            tipoP = "zapatillas"
+        atribABuscar = input("Por qué atributo deseas buscar:\n1)Marca\n2)Color\n3)Talla\n")
+        atribNombre = input("Introduce el dato")
+        
+        for prenda in self.prendas:
+            if prenda.tipo == tipoP and atribABuscar == "1":
+                print("encontrado")
+                if prenda.marca == atribNombre:
+                    
+                    contentXML += f"<prenda tipo={prenda.tipo} marca={prenda.marca} color={prenda.color} talla = {prenda.talla} />"
+            if prenda.tipo == tipoPrenda and atribABuscar == "2":
+                if prenda.color == atribNombre:
+                    contentXML += f"<prenda tipo={prenda.tipo} marca={prenda.marca} color={prenda.color} talla = {prenda.talla} />"
+            if prenda.tipo == tipoPrenda and atribABuscar == "3":
+                if prenda.talla == atribNombre:
+                    contentXML += f"<prenda tipo={prenda.tipo} marca={prenda.marca} color={prenda.color} talla = {prenda.talla} />"
+        contentXML += "</armario>"
+        write("data/resultados.xml",contentXML)
+        file = open("data/resultados.xml","r")
+        print(file.read())
+
+
+
+        
+
+    # def eliminar(self):
+    #     for prenda in prendas:     
