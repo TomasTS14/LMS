@@ -1,1 +1,3 @@
-<armario><prenda tipo=zapatillas marca=nike color=43 talla = 43 /><prenda tipo=zapatillas marca=nike color=43.5 talla = 43.5 /></armario>
+<armario>
+    <prenda tipo="camiseta" marca="Desigual" color="azul" talla="L" />
+</armario>
