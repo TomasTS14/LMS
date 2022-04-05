@@ -1,6 +1,6 @@
 <armario>
     <prenda tipo="camisetas" marca="nike" color="blanco" talla="L" />
-    <prenda tipo="pantalones" color="marron" talla="largo" />
+    <prenda tipo="pantalones" marca="" color="marron" talla="L" />
     <prenda tipo="zapatillas" marca="nike" color="blanco" talla="43" />
     <prenda tipo="zapatillas" marca="nike" color="negro" talla="43.5" />
 </armario>

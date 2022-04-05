@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 def read(file):
     tree = ET.parse(file)
-    return tree.getroot
+    return tree.getroot()
 
 
 def write(fileName, content):
