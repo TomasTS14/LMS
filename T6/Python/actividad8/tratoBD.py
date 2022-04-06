@@ -7,8 +7,8 @@ path = './data/fichero.xml'
 
 class BD:
     mydb = mysql.connector.connect(
-        host="80.34.34.150",
-        port="33070",
+        host="192.168.8.25",
+        port="3306",
         user="admin",
         password="admin",
         database="armario"
@@ -29,4 +29,10 @@ class BD:
         print("Insercion de fichero: "+path+" conseguida\n\n")
 
 
-def generarFicherConBD(self):
+    def leer(self):
+        self.mycursor.execute("SELECT * FROM camisetas")
+
+        myresult = self.mycursor.fetchall()
+
+        for x in myresult:
+            print(x[0]) 

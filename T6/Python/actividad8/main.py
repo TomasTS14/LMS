@@ -7,7 +7,7 @@ from controller.output import writeXML
 from tratoBD import *
 
 
-def menu():
+""" def menu():
     bbdd = BD()
     seguir = True
     while seguir == True:
@@ -31,3 +31,7 @@ def menu():
 
 
 menu()
+ """
+
+bd = BD()
+bd.leer()
