@@ -1,17 +1,23 @@
-from pruebaOrganizadorRopa.entities.camiseta import Camiseta
-from pruebaOrganizadorRopa.entities.pantalon import Pantalon
-from pruebaOrganizadorRopa.entities.prenda import Prenda
-from pruebaOrganizadorRopa.entities.zapato import Zapato
+from entities.camiseta import Camiseta
+from entities.pantalon import Pantalon
+from entities.prenda import Prenda
+from entities.zapato import Zapato
+from pathlib import Path
+from commons.utils import write, read
 
 
 class Armario():
     prendas = []
+
+    def __init__(self):
+        self.leerArmario()
 
     def escribeXML(self):
         content = "<armario>"
         for prenda in self.prendas:
             content += f"<{prenda.tipo} marca = {prenda.marca} color = {prenda.color} talla = {prenda.talla}"
         content += "</armario>"
+        write(content, "../data/prendas.xml")
 
     def agregarAarmario(self):
         prendaAagregar = None
@@ -31,3 +37,20 @@ class Armario():
             f"introduce la talla de {prendaAagregar.tipo}")
         self.prendas.append(prendaAagregar)
         self.escribeXML()
+
+    def leerArmario(self):
+        if Path.exists('data/prendas.xml'):
+            prendas = read("../data/prendas.xml")
+            for prenda in prendas:
+                if prenda.tag == "camiseta":
+                    camiseta = Camiseta(
+                        prenda.attrib["marca"], prenda.attrib["color"], prenda.attrib["talla"])
+                    self.prendas.append(camiseta)
+                elif prenda.tag == "pantalon":
+                    pantalon = Pantalon(
+                        prenda.attrib["marca"], prenda.attrib["color"], prenda.attrib["talla"])
+                    self.prendas.append(pantalon)
+                elif prenda.tag == "zapato":
+                    zapato = Zapato(
+                        prenda.attrib["marca"], prenda.attrib["color"], prenda.attrib["talla"])
+                    self.prendas.append(zapato)

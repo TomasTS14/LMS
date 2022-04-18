@@ -1,4 +1,4 @@
-from pruebaOrganizadorRopa.entities.prenda import Prenda
+from entities.prenda import Prenda
 
 
 class Zapato(Prenda):

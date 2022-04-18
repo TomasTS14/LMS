@@ -1,4 +1,9 @@
-from pruebaOrganizadorRopa.entities.armario import Armario
+from html import entities
+from entities.armario import Armario
+from entities.prenda import Prenda
+from entities.camiseta import Camiseta
+from entities.pantalon import Pantalon
+from entities.zapato import Zapato
 
 
 armario = Armario()
@@ -17,15 +22,26 @@ def main():
 
 
 def filtrado():
+    prendaBuscada = Prenda()
     opcion = int(input(
         "Elige filtros a usar: Filtrar por ropa [1]\nfiltrar por color [2]\nfiltrar por talla[3]\nfiltrar por marca [4], Para mostrar resultados[-1]\n"))
     if opcion == 1:
-        armario.filtrarPorRopa()
+        tipoRopa = int(
+            input("filtra por:\nCamiseta [1]\nPantalon [2]\nZapato [3\n]"))
+        match (tipoRopa):
+            case 1: prendaBuscada.tipo = "camiseta"
+            case 2: prendaBuscada.tipo = "pantalon"
+            case 3: prendaBuscada.tipo = "zapato"
     elif opcion == 2:
-        armario.filtrarPorColor()
+        colorAbuscar = input("Introduce el color a buscar:\n")
+        prendaBuscada.color = colorAbuscar
     elif opcion == 3:
-        armario.filtrarPorTalla()
+        tallaBuscada = int(input("Introduce la talla que deseas buscar"))
+        prendaBuscada.talla = tallaBuscada
     elif opcion == 4:
-        armario.filtrarPorMarca()
+        marcaBuscada = input("Introduce la marca a buscar")
+        prendaBuscada.marca = marcaBuscada
     elif opcion == -1:
-        armario.mostrarResultados()
+        for prenda in armario.prendas:
+            if prenda.tipo == prendaBuscada.tipo and prenda.color == prendaBuscada.color and prenda.marca == prendaBuscada.marca:
+                print(prenda)

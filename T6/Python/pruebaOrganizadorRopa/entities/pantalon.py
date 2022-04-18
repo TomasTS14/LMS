@@ -1,4 +1,4 @@
-from actividad7.entities.Prenda import Prenda
+from entities.prenda import Prenda
 
 
 class Pantalon(Prenda):
