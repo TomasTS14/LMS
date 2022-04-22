@@ -9,13 +9,14 @@ from tratoBD import *
 
 def menu():
     bbdd = BD()
-    #PRUEBAS
-    result = bbdd.leerCada("camisetas")
-    print(result)
-    tablas = bbdd.traerTablas()
-    print(tablas)
-    bbdd.escribirDatosXML()
-    #PRUEBAS POR DIOS
+    # PRUEBAS
+    # result = bbdd.leerCada("camisetas")
+    # print(result)
+    # tablas = bbdd.traerTablas()
+    # print(tablas)
+    # tablasMejoradas = bbdd.arreglaArraysdeStrings(tablas)
+    # print(tablasMejoradas)
+    # PRUEBAS POR DIOS
     seguir = True
     while seguir == True:
         opcion = int(input(f"Elige una accion:\n" +
@@ -26,9 +27,9 @@ def menu():
         if opcion == 1:
             bbdd.leerDeFichero()
         elif opcion == 2:
-            
+            bbdd.generarDatosXML('./data/datos.xml')
         elif opcion == 3:
-            mostrarPrendasConsola()
+            bbdd.verTodasLasPrendas()
         elif opcion == 4:
             agregarPrenda()
         elif opcion == 5:
