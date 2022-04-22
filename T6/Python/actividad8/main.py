@@ -7,8 +7,15 @@ from controller.output import writeXML
 from tratoBD import *
 
 
-""" def menu():
+def menu():
     bbdd = BD()
+    #PRUEBAS
+    result = bbdd.leerCada("camisetas")
+    print(result)
+    tablas = bbdd.traerTablas()
+    print(tablas)
+    bbdd.escribirDatosXML()
+    #PRUEBAS POR DIOS
     seguir = True
     while seguir == True:
         opcion = int(input(f"Elige una accion:\n" +
@@ -19,7 +26,7 @@ from tratoBD import *
         if opcion == 1:
             bbdd.leerDeFichero()
         elif opcion == 2:
-            generarFichero()
+            
         elif opcion == 3:
             mostrarPrendasConsola()
         elif opcion == 4:
@@ -31,7 +38,3 @@ from tratoBD import *
 
 
 menu()
- """
-
-bd = BD()
-bd.leer()

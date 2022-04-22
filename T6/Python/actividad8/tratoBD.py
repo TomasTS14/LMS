@@ -1,16 +1,17 @@
-from common.utils import read
+from common.utils import read, write
 import mysql.connector
 
 
 path = './data/fichero.xml'
+pathSalida = './data/datos.xml'
 
 
 class BD:
     mydb = mysql.connector.connect(
         host="192.168.8.25",
         port="3306",
-        user="admin",
-        password="admin",
+        user="actividad8",
+        password="actividad8",
         database="armario"
     )
     mycursor = mydb.cursor()
@@ -29,10 +30,33 @@ class BD:
         print("Insercion de fichero: "+path+" conseguida\n\n")
 
 
-    def leer(self):
-        self.mycursor.execute("SELECT * FROM camisetas")
+    def leerCada(self,tipo):
+        sql = f"SELECT * FROM  {tipo}"
+        
+        self.mycursor.execute(sql)
 
         myresult = self.mycursor.fetchall()
+        return myresult
 
-        for x in myresult:
-            print(x[0]) 
+    def traerTablas(self):
+        sql = "SHOW TABLES"
+        self.mycursor.execute(sql)
+        tablas = self.mycursor.fetchall()
+        return tablas
+
+    def escribirDatosXML(self):
+        content = "<armario>" 
+        tablas = self.traerTablas()
+        for x in tablas:
+            selectActual = f"SELECT * FROM {x}"
+            content += f"<{x}>"
+            self.mycursor.execute(selectActual)
+            prendas = self.mycursor.fetchall()
+            for prenda in prendas:
+                marca = prenda[0]
+                color = prenda[1]
+                talla = prenda[2]
+                content += f"<{x} marca='{marca}' color = '{color}' talla='{talla}/>"
+            content += f"<{x}/>"
+        content += "</armario>"
+        write(pathSalida,content)
