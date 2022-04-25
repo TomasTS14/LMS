@@ -1,9 +1,7 @@
 <armario>
     <camisetas>
-        <camisetas codigo='1' marca='nike' color='blanco' talla='L' />
-        <camisetas codigo='2' marca='nike' color='blanco' talla='L' />
-        <camisetas codigo='3' marca='nike' color='blanco' talla='L' />
-        <camisetas codigo='4' marca='nike' color='blanco' talla='L' />
+        <camisetas codigo='7' marca='agregadoDESDEapp' color='naranja' talla='xl' />
+        <camisetas codigo='8' marca='introducidoENAPP' color='negro' talla='xl' />
     </camisetas>
     <pantalones>
         <pantalones codigo='1' marca='' color='marron' talla='L' />
