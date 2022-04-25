@@ -16,6 +16,7 @@ class BD:
     mycursor = mydb.cursor()
 
     def leerDeFichero(self):
+        # path = input("Introduce la ruta del fichero desde el que leer:\n") para leer de ficheros cualquiera, para prueba dejo comentado.
         armario = read(path)
         for prenda in armario:
             tipo = prenda.attrib['tipo']
@@ -76,3 +77,29 @@ class BD:
         print(contents)
         file.close()
         os.remove('./data/temp.xml')
+
+    def agregarPrenda(self):
+        tipoPrenda = int(input(
+            "Introduce el tipo de prenda a introducir:\nCamiseta [1]\Pantalon [2]\nZapatillas [3]\n"))
+        marcaPrenda = input("introduce la marca de esta prenda:\n")
+        colorPrenda = input("Introduce el color de la prenda:\n")
+        tallaPrenda = input("Introduce la talla de esta prenda:\n")
+        print(
+            f"La prenda ha introducir es ({tipoPrenda}: marca={marcaPrenda} , color={colorPrenda} , talla={tallaPrenda} ")
+        sql = "INSERT INTO %s VALUES (%s, %s, %s)"
+        val = (tipoPrenda, marcaPrenda, colorPrenda, tallaPrenda)
+        self.mycursor.execute(sql, val)
+        self.mydb.commit()
+
+    def eliminarPrenda(self):
+        tipoPrenda = int(input(
+            "Introduce el tipo de prenda a eliminar:\nCamiseta [1]\Pantalon [2]\nZapatillas [3]\n"))
+        marcaPrenda = input("introduce la marca de esta prenda:\n")
+        colorPrenda = input("Introduce el color de la prenda:\n")
+        tallaPrenda = input("Introduce la talla de esta prenda:\n")
+        print(
+            f"La prenda ha eliminar es ({tipoPrenda}: marca={marcaPrenda} , color={colorPrenda} , talla={tallaPrenda} ")
+        sql = "DELETE FROM %s WHERE marca=%s AND color=%s AND talla=%s"
+        val = (tipoPrenda, marcaPrenda, colorPrenda, tallaPrenda)
+        self.mycursor.execute(sql, val)
+        self.mydb.commit()

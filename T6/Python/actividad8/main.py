@@ -1,6 +1,5 @@
 # entities
 from common.utils import write
-from entities.Armario import Armario
 # controllers
 from controller.output import writeHTML
 from controller.output import writeXML
@@ -9,14 +8,6 @@ from tratoBD import *
 
 def menu():
     bbdd = BD()
-    # PRUEBAS
-    # result = bbdd.leerCada("camisetas")
-    # print(result)
-    # tablas = bbdd.traerTablas()
-    # print(tablas)
-    # tablasMejoradas = bbdd.arreglaArraysdeStrings(tablas)
-    # print(tablasMejoradas)
-    # PRUEBAS POR DIOS
     seguir = True
     while seguir == True:
         opcion = int(input(f"Elige una accion:\n" +
@@ -31,9 +22,9 @@ def menu():
         elif opcion == 3:
             bbdd.verTodasLasPrendas()
         elif opcion == 4:
-            agregarPrenda()
+            bbdd.agregarPrenda()
         elif opcion == 5:
-            eliminarPrenda()
+            bbdd.eliminarPrenda()
         elif opcion == 6:
             seguir = False
 
